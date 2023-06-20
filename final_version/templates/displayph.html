@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SYLLABIFICATION</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../static/css/second.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Playfair Display', serif;}
+
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+ 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+.clearfix{
+  margin : 2px 200px 1px 200px;
+  padding : 1px;
+  background-color : #277a8ac9;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: white!important;
+    background-color: #1a273d!important;
+}
+.w3-center{
+  color:white;
+}
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../static/images/white.jpg");
+  min-height: 100%;
+}
+
+.box1, .box3{
+  color:white;
+}
+
+.cent{
+  margin-left: 37%;
+  background-color: #0000005e;
+  margin-right: 36%;
+  margin-top: 60px;
+}
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="/team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="/phon" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PHONETICS</a>
+      <a href="/linguists" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> LINGUISTS</a>
+      <a href="/queries" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>QUERIES</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- About Section -->
+<div class="bgimg-1">
+<div class="w3-container" style="padding: 50px 0px;" id="about">
+  <div class="clearfix">
+    <h2 class="w3-center">PHONETICS</h2>
+  </div>
+       
+  <div class="cent">
+    <h2>Word : {{text}}</h2>
+    <h3>Phonetic form : {{ph}}</h3>
+    
+    <p><a href="/phon" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Try another!</a></p>
+  
+  </div> 
+    
+
+  <script>
+
+    function valid() {
+        nm = document.getElementById('fname').value;
+        
+        if (nm == "") 
+        {
+          alert('no data');
+      }
+      else{
+        t1 = "/phonetic/"
+        t1 = t1.concat(nm)    
+        open(t1)
+      }
+    }
+
+    function fileValidation() {
+      var fileInput =
+        document.getElementById('file');
+      
+      var filePath = fileInput.value;
+    
+      // Allowing file type
+      var allowedExtensions =
+          /(\.wav)$/i;
+      
+      if (!allowedExtensions.exec(filePath)) {
+        alert('Invalid file type');
+        fileInput.value = '';
+        return false;
+      }
+      
+      
+    }
+    </script>

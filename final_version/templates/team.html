@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SYLLABIFICATION</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/second.css">
+<link rel="stylesheet" href="static/css/team.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Playfair Display', serif;}
+
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+ 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+.clearfix{
+  margin: -47px 200px 1px 200px;
+  padding: -9px;
+  background-color: #277a8ac9;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: white!important;
+    background-color: #1a273d!important;
+}
+.w3-center{
+  color:white;
+}
+
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("static/images/white.jpg");
+  min-height: 100%;
+  height: 714px;
+
+}
+
+.box1, .box3{
+  color:white;
+}
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="/team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="/phon" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PHONETICS</a>
+      <a href="/linguists" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> LINGUISTS</a>
+      <a href="/queries" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>QUERIES</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+  <i class="fa fa-bars"></i>
+</a>
+</div>
+
+
+
+<!-- About Section -->
+<div class="bgimg-1">
+  <div class="w3-container" style="padding: 50px 0px;" id="about">
+    <div class="clearfix">
+      
+      <h2 class="w3-center">TEAM</h2>
+  
+          </div> 
+        </div>
+        <div class="container">
+          <div class="row">
+    
+    
+              <div class="column">
+                  <div class="team">
+                      <div class="team-img">
+                          <img src="static\images\team2.jpg" alt="Team Image">
+                      </div>
+                      <div class="team-content">
+                          <h2>Sagar Thorat</h2>
+                          <h3>Age 22</h3>
+                          <p>MSc CS , Fergusson College, Pune</p>
+                          <h4>sagarthorat034@gmail.com</h4>
+                      </div>
+                   
+                  </div>
+              </div>
+    
+              <div class="column">
+                  <div class="team">
+                      <div class="team-img">
+                          <img src="static\images\team1.jpg" alt="Team Image">
+                      </div>
+                      <div class="team-content">
+                          <h2>Treasa Janet</h2>
+                          <h3>Age 21</h3>
+                          <p>Msc CS, Fergusson College, Pune</p>
+                          <h4>treasahelosia7@gmail.com</h4>
+                      </div>
+                     
+                  </div>
+              </div>
+    
+              <div class="column">
+                  <div class="team">
+                      <div class="team-img">
+                          <img src="static\images\team3.jpg" alt="Team Image">
+                      </div>
+                      <div class="team-content">
+                          <h2>Nandana R Nair</h2>
+                          <h3>Age 23</h3>
+                          <p>MA Linguistics, Delhi University</p>
+                          <h4>nandanarnair@gmail.com</h4>
+                      </div>
+                  </div>
+              </div>
+    
+        </div>
+      </div>
+  </div>
+    
+  <script>
+
+    function valid() {
+        nm = document.getElementById('fname').value;
+        
+        if (nm == "") 
+        {
+          alert('no data');
+      }
+      else{
+        t1 = "/work/"
+        t1 = t1.concat(nm)    
+        open(t1)
+      }
+    }
+
+    function fileValidation() {
+      var fileInput =
+        document.getElementById('file');
+      
+      var filePath = fileInput.value;
+    
+      // Allowing file type
+      var allowedExtensions =
+          /(\.wav)$/i;
+      
+      if (!allowedExtensions.exec(filePath)) {
+        alert('Invalid file type');
+        fileInput.value = '';
+        return false;
+      }
+      
+      
+    }
+    </script>
